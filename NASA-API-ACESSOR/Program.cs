@@ -23,6 +23,13 @@ namespace NASA_API_ACESSOR
             //var datas = await stringTask;
             var NEO = await JsonSerializer.DeserializeAsync<RootObject>(await streamTask);
 
+            foreach ( var item in NEO.near_earth_objects.Keys)
+            {
+                Console.WriteLine(item);
+                Console.WriteLine(NEO.near_earth_objects[item]) ;
+            }
+
+            
             //foreach( var x in NEO)
             //{
             //    Console.WriteLine(x.near_earth_objects.Keys);

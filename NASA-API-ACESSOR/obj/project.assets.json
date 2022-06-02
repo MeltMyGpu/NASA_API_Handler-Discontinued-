@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CODE\\Learning\\NASA-API-ACESSOR\\NASA-API-ACESSOR\\NASA-API-ACESSOR.csproj",
+      "projectUniqueName": "D:\\CODE\\NASA-API-ACESSOR\\NASA_API_Handler\\NASA-API-ACESSOR\\NASA-API-ACESSOR.csproj",
       "projectName": "NASA-API-ACESSOR",
-      "projectPath": "D:\\CODE\\Learning\\NASA-API-ACESSOR\\NASA-API-ACESSOR\\NASA-API-ACESSOR.csproj",
+      "projectPath": "D:\\CODE\\NASA-API-ACESSOR\\NASA_API_Handler\\NASA-API-ACESSOR\\NASA-API-ACESSOR.csproj",
       "packagesPath": "C:\\Users\\kiera\\.nuget\\packages\\",
-      "outputPath": "D:\\CODE\\Learning\\NASA-API-ACESSOR\\NASA-API-ACESSOR\\obj\\",
+      "outputPath": "D:\\CODE\\NASA-API-ACESSOR\\NASA_API_Handler\\NASA-API-ACESSOR\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kiera\\AppData\\Roaming\\NuGet\\NuGet.Config",
