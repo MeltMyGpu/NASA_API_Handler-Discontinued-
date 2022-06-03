@@ -15,16 +15,25 @@ namespace NASA_API_ACESSOR
         
 
         static async Task Main()
-        {
-            var tempClient = new Client("www.Google.com");
+         {
+            var NEO_hand = new NEO_Handler("mJvy7YJc61X7vQJcOc98F5Wr1dxm8HqZGildnXbc");
+            NEO_hand.GetNEOData("2022-01-01","2022-01-08");
+
+
+
+
+
+
+
+            //var tempClient = new Client("www.Google.com");
             
-            var NEO =  await tempClient.SendAPIRequest("2022-01-01", "2022-01-08", "mJvy7YJc61X7vQJcOc98F5Wr1dxm8HqZGildnXbc");
-            // await ProcessNasaData();
-            foreach ( var item in NEO.near_earth_objects.Keys)
-            {
-                Console.WriteLine(item);
-                Console.WriteLine(NEO.near_earth_objects[item]) ;
-            }
+            //var NEO =  await tempClient.SendAPIRequest("2022-01-01", "2022-01-08", "mJvy7YJc61X7vQJcOc98F5Wr1dxm8HqZGildnXbc");
+            //// await ProcessNasaData();
+            //foreach ( var item in NEO.near_earth_objects.Keys)
+            //{
+            //    Console.WriteLine(item);
+            //    Console.WriteLine(NEO.near_earth_objects[item]) ;
+            //}
         }
 
         private static async Task ProcessNasaData()

@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj": {}
+    "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj": {}
   },
   "projects": {
-    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj": {
+    "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj",
+        "projectUniqueName": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj",
         "projectName": "NASA_API_NEO_Wrapper",
-        "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj",
-        "packagesPath": "/home/meltmygpu/.nuget/packages/",
-        "outputPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/obj/",
+        "projectPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj",
+        "packagesPath": "C:\\Users\\kiera\\.nuget\\packages\\",
+        "outputPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Code\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/meltmygpu/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\kiera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

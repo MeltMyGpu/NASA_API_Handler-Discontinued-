@@ -1,18 +1,3 @@
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/bin/Debug/net6.0/API_Handle.deps.json
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/bin/Debug/net6.0/API_Handle.dll
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/bin/Debug/net6.0/API_Handle.pdb
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/API_Handle.csproj.AssemblyReference.cache
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/API_Handle.GeneratedMSBuildEditorConfig.editorconfig
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/API_Handle.AssemblyInfoInputs.cache
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/API_Handle.AssemblyInfo.cs
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/API_Handle.csproj.CoreCompileInputs.cache
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/API_Handle.dll
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/refint/API_Handle.dll
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/API_Handle.pdb
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/ref/API_Handle.dll
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/bin/Debug/net6.0/NASA-API-NEO-Wrapper.dll
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/bin/Debug/net6.0/NASA-API-NEO-Wrapper.pdb
-E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/Debug/net6.0/API_Handle.csproj.CopyComplete
 /home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/bin/Debug/net6.0/API_Handle.deps.json
 /home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/bin/Debug/net6.0/API_Handle.dll
 /home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/bin/Debug/net6.0/API_Handle.pdb
@@ -28,3 +13,18 @@ E:/Code/Project libary/C#/The basics/Learning/NASA_API_Handler/API_Handle/obj/De
 /home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/obj/Debug/net6.0/ref/API_Handle.dll
 /home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/bin/Debug/net6.0/NASA_API_NEO_Wrapper.dll
 /home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/bin/Debug/net6.0/NASA_API_NEO_Wrapper.pdb
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\bin\Debug\net6.0\API_Handle.deps.json
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\bin\Debug\net6.0\API_Handle.dll
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\bin\Debug\net6.0\API_Handle.pdb
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\bin\Debug\net6.0\NASA_API_NEO_Wrapper.dll
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\bin\Debug\net6.0\NASA_API_NEO_Wrapper.pdb
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\API_Handle.csproj.AssemblyReference.cache
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\API_Handle.GeneratedMSBuildEditorConfig.editorconfig
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\API_Handle.AssemblyInfoInputs.cache
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\API_Handle.AssemblyInfo.cs
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\API_Handle.csproj.CoreCompileInputs.cache
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\API_Handle.csproj.CopyComplete
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\API_Handle.dll
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\refint\API_Handle.dll
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\API_Handle.pdb
+E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\ref\API_Handle.dll

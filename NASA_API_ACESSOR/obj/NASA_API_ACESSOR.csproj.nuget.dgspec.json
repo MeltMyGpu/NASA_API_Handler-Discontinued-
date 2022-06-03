@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/NASA_API_ACESSOR.csproj": {}
+    "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_ACESSOR\\NASA_API_ACESSOR.csproj": {}
   },
   "projects": {
-    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj": {
+    "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\API_Handle\\API_Handle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj",
+        "projectUniqueName": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\API_Handle\\API_Handle.csproj",
         "projectName": "API_Handle",
-        "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj",
-        "packagesPath": "/home/meltmygpu/.nuget/packages/",
-        "outputPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/obj/",
+        "projectPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\API_Handle\\API_Handle.csproj",
+        "packagesPath": "C:\\Users\\kiera\\.nuget\\packages\\",
+        "outputPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\API_Handle\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Code\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/meltmygpu/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\kiera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj": {
-                "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj"
+              "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj": {
+                "projectPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj"
               }
             }
           }
@@ -41,6 +47,20 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,37 +76,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/NASA_API_ACESSOR.csproj": {
+    "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_ACESSOR\\NASA_API_ACESSOR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/NASA_API_ACESSOR.csproj",
+        "projectUniqueName": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_ACESSOR\\NASA_API_ACESSOR.csproj",
         "projectName": "NASA_API_ACESSOR",
-        "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/NASA_API_ACESSOR.csproj",
-        "packagesPath": "/home/meltmygpu/.nuget/packages/",
-        "outputPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/obj/",
+        "projectPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_ACESSOR\\NASA_API_ACESSOR.csproj",
+        "packagesPath": "C:\\Users\\kiera\\.nuget\\packages\\",
+        "outputPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_ACESSOR\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Code\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/meltmygpu/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\kiera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj": {
-                "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj"
+              "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\API_Handle\\API_Handle.csproj": {
+                "projectPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\API_Handle\\API_Handle.csproj"
               },
-              "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj": {
-                "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj"
+              "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj": {
+                "projectPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj"
               }
             }
           }
@@ -100,6 +126,20 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -115,26 +155,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj": {
+    "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj",
+        "projectUniqueName": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj",
         "projectName": "NASA_API_NEO_Wrapper",
-        "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/NASA_API_NEO_Wrapper.csproj",
-        "packagesPath": "/home/meltmygpu/.nuget/packages/",
-        "outputPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_NEO_Wrapper/obj/",
+        "projectPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\NASA_API_NEO_Wrapper.csproj",
+        "packagesPath": "C:\\Users\\kiera\\.nuget\\packages\\",
+        "outputPath": "E:\\Code\\Project libary\\C#\\The basics\\Learning\\NASA_API_Handler\\NASA_API_NEO_Wrapper\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Code\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/meltmygpu/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\kiera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -167,7 +213,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
