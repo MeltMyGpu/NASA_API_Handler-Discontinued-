@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NASA_API_ACESSOR
+namespace NASA_API_NEO_Wrapper
 {
     public class Observation
     {

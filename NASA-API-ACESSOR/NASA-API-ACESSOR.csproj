@@ -8,4 +8,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\API_Handle\API_Handle.csproj" />
+    <ProjectReference Include="..\NASA-API-Wrapper\NASA-API-NEO-Wrapper.csproj" />
+  </ItemGroup>
+
 </Project>
