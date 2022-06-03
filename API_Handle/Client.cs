@@ -56,7 +56,7 @@ namespace API_Handle
             return Pingable;
         }
 
-        public async Task<NEORootObject?> SendAPIRequest(string key, string dateStart, string dateEnd)
+        public async Task<NEORootObject?> SendAPIRequest(string dateStart, string dateEnd, string key)
         {
             var url = string.Format($"https://api.nasa.gov/neo/rest/v1/feed?start_date={dateStart}&end_date={dateEnd}&api_key={key}");
 
@@ -90,19 +90,19 @@ namespace API_Handle
 
                 if ( httpWebResponceCheck.StatusCode == HttpStatusCode.OK)
                 {
-                    Console.WriteLine($"API connection status code 200, Desription is: {0}",httpWebResponceCheck.StatusDescription);
+                    Console.WriteLine(string.Format($"API connection status code 200: "));
                 }
                 httpWebResponceCheck.Close();
 
             }
             catch (WebException e)
             {
-                Console.WriteLine($" Web exception raised, the following error occured: {0}", e.Status);
+                Console.WriteLine($" Web exception raised, the following error occured: {e.Status}");
                 throw;
             }
             catch  ( Exception e)
             {
-                Console.WriteLine($" Exeption thrown : {0} ", e.Message);
+                Console.WriteLine($" Exeption thrown : {e.Message} " );
                 throw;
             }
         }

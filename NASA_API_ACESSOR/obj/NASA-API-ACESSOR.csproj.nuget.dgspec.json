@@ -1,0 +1,175 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/NASA-API-ACESSOR.csproj": {}
+  },
+  "projects": {
+    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj",
+        "projectName": "API_Handle",
+        "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj",
+        "packagesPath": "/home/meltmygpu/.nuget/packages/",
+        "outputPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/meltmygpu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA-API-Wrapper/NASA-API-NEO-Wrapper.csproj": {
+                "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA-API-Wrapper/NASA-API-NEO-Wrapper.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA-API-Wrapper/NASA-API-NEO-Wrapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA-API-Wrapper/NASA-API-NEO-Wrapper.csproj",
+        "projectName": "NASA-API-NEO-Wrapper",
+        "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA-API-Wrapper/NASA-API-NEO-Wrapper.csproj",
+        "packagesPath": "/home/meltmygpu/.nuget/packages/",
+        "outputPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA-API-Wrapper/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/meltmygpu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/NASA-API-ACESSOR.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/NASA-API-ACESSOR.csproj",
+        "projectName": "NASA-API-ACESSOR",
+        "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/NASA-API-ACESSOR.csproj",
+        "packagesPath": "/home/meltmygpu/.nuget/packages/",
+        "outputPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA_API_ACESSOR/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/meltmygpu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj": {
+                "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/API_Handle/API_Handle.csproj"
+              },
+              "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA-API-Wrapper/NASA-API-NEO-Wrapper.csproj": {
+                "projectPath": "/home/meltmygpu/Documents/git_code_store/NASA_API_Wrapper/NASA_API_Handler/NASA-API-Wrapper/NASA-API-NEO-Wrapper.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

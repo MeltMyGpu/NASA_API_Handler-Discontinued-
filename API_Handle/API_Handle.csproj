@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NASA-API-Wrapper\NASA-API-NEO-Wrapper.csproj" />
+    <ProjectReference Include="..\NASA_API_NEO_Wrapper\NASA_API_NEO_Wrapper.csproj" />
   </ItemGroup>
 
 </Project>

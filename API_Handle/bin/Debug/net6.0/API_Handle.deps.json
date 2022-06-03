@@ -8,15 +8,15 @@
     ".NETCoreApp,Version=v6.0": {
       "API_Handle/1.0.0": {
         "dependencies": {
-          "NASA-API-NEO-Wrapper": "1.0.0"
+          "NASA_API_NEO_Wrapper": "1.0.0"
         },
         "runtime": {
           "API_Handle.dll": {}
         }
       },
-      "NASA-API-NEO-Wrapper/1.0.0": {
+      "NASA_API_NEO_Wrapper/1.0.0": {
         "runtime": {
-          "NASA-API-NEO-Wrapper.dll": {}
+          "NASA_API_NEO_Wrapper.dll": {}
         }
       }
     }
@@ -27,7 +27,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "NASA-API-NEO-Wrapper/1.0.0": {
+    "NASA_API_NEO_Wrapper/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
