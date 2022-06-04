@@ -18,6 +18,7 @@ namespace API_Handle
         private string _APIKey;
         private string? _url;
         private readonly Regex _dateFormatCheck;
+        public bool Connected { get; private set; }
         public ILogger Logger { get; set; }
 
 
@@ -27,7 +28,7 @@ namespace API_Handle
             _APIKey = key; 
             _dateFormatCheck = new Regex("^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$"); // Is here to ensure the dates passed in are in teh correct format //
             Logger = IloggerFactory.LoggerCreation();
-            Logger.LogInformation("Api key set to", key);
+            Logger.LogInformation(String.Format($"Api key set to {key}"));
 
         }
 
@@ -44,6 +45,12 @@ namespace API_Handle
             }
         }
 
+        public void DisposeOfClient()
+        {
+            _client.Dispose();
+            Logger.LogInformation("HTTP Client disposed; ");
+        }
+
         public void ChangeAPIKey(string key)
         {
             NullInputCheck(new string[] {key});
@@ -54,7 +61,6 @@ namespace API_Handle
 
         public async void GetNEOData(string dateStart, string dateEnd)
         {
-            NullInputCheck(new string[] { dateStart, dateEnd });
             await GetOutNEOData(dateStart, dateEnd);
         }
 
@@ -62,13 +68,14 @@ namespace API_Handle
         public async Task<NEORootObject> GetOutNEOData(string dateStart, string dateEnd)
         {
             NullInputCheck(new string[] { dateStart, dateEnd });
+
             if (_dateFormatCheck.IsMatch(dateStart) && _dateFormatCheck.IsMatch(dateEnd))
             {
                 _url = string.Format($"https://api.nasa.gov/neo/rest/v1/feed?start_date={dateStart}&end_date={dateEnd}&api_key={_APIKey}");
 
                 try
                 {
-                    _client.ConnectionCheck(_url);
+                    Connected = _client.ConnectionCheck(_url);
                     Logger.LogInformation("Connection check successful;");
                 }
                 catch (Exception ex)

@@ -9,7 +9,8 @@ namespace API_Handle
     {
         private static readonly HttpClient _client = new HttpClient();
         private bool _disposed;
-        private bool _connected;
+
+        private bool _Connected;
 
         public Client() // Default
         {
@@ -24,21 +25,11 @@ namespace API_Handle
         }
 
 
-        public void ConnectionCheck(string url) // WORKING
+        public bool ConnectionCheck(string url) // WORKING
         {
-            try
-            {
-                _connected = ConnectionPing();
-                if (!_connected)
-                {
-                    throw new Exception("Internet not connected");
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
 
+            _Connected = ConnectionPing();
+            return _Connected;
         }
 
 
@@ -55,21 +46,9 @@ namespace API_Handle
         }
 
 
-        public async Task<NEORootObject?> SendAPIRequest(string url)
+        public async Task<NEORootObject?> SendAPIRequest(string url) // WORKING
         {
-
-            try
-            {
-                APIValidCheck(url);
-            }
-            catch (WebException)
-            {
-                throw;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            APIValidCheck(url);
 
             var streamTask = _client.GetStreamAsync(url);
             var NEO = await JsonSerializer.DeserializeAsync<NEORootObject>(await streamTask);
@@ -79,18 +58,27 @@ namespace API_Handle
             else throw new InvalidOperationException("The Api call has returned a NUll Reference; ");
         }
 
-        private static void APIValidCheck(string url)
+        private static void APIValidCheck(string url) // WORKING
         {
             var httpWebRequestCheck = (HttpWebRequest)WebRequest.Create(url);
             var httpWebResponceCheck = (HttpWebResponse)httpWebRequestCheck.GetResponse();
 
             if (httpWebResponceCheck.StatusCode == HttpStatusCode.OK)
             {
-                Console.WriteLine(string.Format($"API connection status code 200: "));
+                Console.WriteLine("API's connection status code is: 200 ");
                 
             }
             httpWebResponceCheck.Close();
         }
 
+
+        public void Dispose()
+        {
+            if (!_disposed)
+            {
+                _client.Dispose();
+            }
+            else Console.WriteLine("Client has already been disposed of; ");
+        }
     }
 }
