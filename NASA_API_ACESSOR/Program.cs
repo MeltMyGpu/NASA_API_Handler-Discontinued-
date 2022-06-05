@@ -15,7 +15,7 @@ namespace NASA_API_ACESSOR
         private static readonly HttpClient client = new HttpClient();
         
 
-        static async Task Main()
+        static async Task Main() // this is all testing functionality and should be ignored.
          {
             var NEO_hand = new NEOHandler("DEMO_KEY");
             var NEO =  await NEO_hand.GetNEOData("2022-01-01","2022-01-08");
@@ -48,15 +48,6 @@ namespace NASA_API_ACESSOR
             }
             
 
-        }
-
-        private static async Task ProcessNasaData()
-        {
-            client.DefaultRequestHeaders.Accept.Clear();
-            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            var streamTask = client.GetStreamAsync("https://api.nasa.gov/neo/rest/v1/feed?start_date=2022-01-01&end_date=2022-01-08&api_key=mJvy7YJc61X7vQJcOc98F5Wr1dxm8HqZGildnXbc");
-            //var datas = await stringTask;
-            var NEO = await JsonSerializer.DeserializeAsync<NEORootObject>(await streamTask);
         }
     }
 }
