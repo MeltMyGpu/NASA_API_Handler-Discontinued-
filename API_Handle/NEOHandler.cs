@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using NASA_API_NEO_Wrapper;
 using Microsoft.Extensions.Logging;
+using APIRequestHandler.JsonWrapper;
+using APIRequestHandler.APIFetch;
 
-
-
-namespace API_Handle
+namespace APIRequestHandler
 {
-    public class NEO_Handler
+    public class NEOHandler
     {
         private readonly Client _client;
         private NEORootObject? _NEOData;
@@ -22,7 +21,7 @@ namespace API_Handle
         public ILogger Logger { get; set; }
 
 
-        public NEO_Handler(string key)
+        public NEOHandler(string key)
         {
             _client = new Client();
             _APIKey = key; 
@@ -59,13 +58,7 @@ namespace API_Handle
         }
 
 
-        public async void GetNEOData(string dateStart, string dateEnd)
-        {
-            await GetOutNEOData(dateStart, dateEnd);
-        }
-
-
-        public async Task<NEORootObject> GetOutNEOData(string dateStart, string dateEnd)
+        public async Task<NEORootObject> GetNEOData(string dateStart, string dateEnd)
         {
             NullInputCheck(new string[] { dateStart, dateEnd });
 

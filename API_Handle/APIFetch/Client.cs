@@ -1,9 +1,9 @@
 ﻿using System.Net.NetworkInformation;
 using System.Net;
-using NASA_API_NEO_Wrapper;
 using System.Text.Json;
+using APIRequestHandler.JsonWrapper;
 
-namespace API_Handle
+namespace APIRequestHandler.APIFetch
 {
     public class Client
     {
@@ -21,7 +21,7 @@ namespace API_Handle
         {
             ConnectionCheck(url);
             _client.DefaultRequestHeaders.Accept.Clear();
-          
+
         }
 
 
@@ -38,10 +38,10 @@ namespace API_Handle
             bool Pingable;
             Ping pinger = new();
 
-            var pingCheck = pinger.Send("www.google.com", 3000);                   
+            var pingCheck = pinger.Send("www.google.com", 3000);
             Pingable = pingCheck.Status == IPStatus.Success;
             pinger.Dispose();
-            
+
             return Pingable;
         }
 
@@ -66,13 +66,13 @@ namespace API_Handle
             if (httpWebResponceCheck.StatusCode == HttpStatusCode.OK)
             {
                 Console.WriteLine("API's connection status code is: 200 ");
-                
+
             }
             httpWebResponceCheck.Close();
         }
 
 
-        public void Dispose()
+        public void Dispose()  // WORKING
         {
             if (!_disposed)
             {

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
-using NASA_API_NEO_Wrapper;
-using API_Handle;
+using APIRequestHandler;
+using APIRequestHandler.JsonWrapper;
+using System.Collections;
 
 namespace NASA_API_ACESSOR
 {
@@ -16,8 +17,36 @@ namespace NASA_API_ACESSOR
 
         static async Task Main()
          {
-            var NEO_hand = new NEO_Handler("DEMO_KEY");
-            NEO_hand.GetNEOData("2022-01-01","2022-01-08");
+            var NEO_hand = new NEOHandler("DEMO_KEY");
+            var NEO =  await NEO_hand.GetNEOData("2022-01-01","2022-01-08");
+            NEO_hand.DisposeOfClient();
+
+            NEODataController.SortData(NEO);
+            NEODataController.SortData(NEO);
+            var Sorted = SortedDataHolder.Instance;
+
+            Console.WriteLine(
+                 "NeoRefId" + " : " +
+                 "EstimatedMaxDiameter" + " : " +
+                 "IsPotentialHazzard" + " : " +
+                 "CloseApproachDate" + " : " +
+                 "RelativeVelocity" + " : " +
+                 "MissDistance" + " // "
+                 );
+
+            foreach (var item in Sorted.NeoSimplifiedObjectAccess.Keys)
+            {
+                for(int i = 0; i < Sorted.NeoSimplifiedObjectAccess[item].Count; i++)
+                Console.WriteLine(
+                    Sorted.NeoSimplifiedObjectAccess[item][i].NeoRefId+ " :      " +
+                    Sorted.NeoSimplifiedObjectAccess[item][i].EstimatedMaxDiameter+ "      :        " +
+                    Sorted.NeoSimplifiedObjectAccess[item][i].IsPotentialHazzard + "          :   " +
+                    Sorted.NeoSimplifiedObjectAccess[item][i].CloseApproachDate + "   : " +
+                    Sorted.NeoSimplifiedObjectAccess[item][i].RelativeVelocity + " : " +
+                    Sorted.NeoSimplifiedObjectAccess[item][i].MissDistance + " // "
+                    );
+            }
+            
 
         }
 

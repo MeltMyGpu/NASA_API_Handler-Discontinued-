@@ -1,4 +1,4 @@
-﻿namespace NASA_API_NEO_Wrapper
+﻿namespace APIRequestHandler.JsonWrapper
 {
     public class NEORootObject
     {

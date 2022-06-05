@@ -15,8 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\API_Handle\API_Handle.csproj" />
-    <ProjectReference Include="..\NASA_API_NEO_Wrapper\NASA_API_NEO_Wrapper.csproj" />
+    <ProjectReference Include="..\API_Handle\APIRequestHandler.csproj" />
   </ItemGroup>
 
 </Project>

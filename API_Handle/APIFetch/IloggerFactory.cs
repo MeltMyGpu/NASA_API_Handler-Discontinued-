@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace API_Handle
+namespace APIRequestHandler.APIFetch
 {
     public class IloggerFactory
     {
@@ -19,7 +19,7 @@ namespace API_Handle
                             .SetMinimumLevel(LogLevel.Debug) // set min level to log 
                             );
 
-            var logger = loggerFactory.CreateLogger<NEO_Handler>();
+            var logger = loggerFactory.CreateLogger<NEOHandler>();
             return logger;
 
         }

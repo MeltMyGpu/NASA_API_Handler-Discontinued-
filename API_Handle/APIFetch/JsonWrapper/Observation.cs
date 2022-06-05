@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NASA_API_NEO_Wrapper
+namespace APIRequestHandler.JsonWrapper
 {
     public class Observation
     {
@@ -63,7 +63,7 @@ namespace NASA_API_NEO_Wrapper
 
     public class Close_Approach_Data
     {
-        public string close_approach_data { get; set; }
+        public string close_approach_date { get; set; }
         public string close_approach_date_full { get; set; }
         public long epoch_date_close_approach { get; set; }
         public Relative_velocity relative_velocity { get; set; }

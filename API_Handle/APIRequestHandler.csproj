@@ -16,8 +16,4 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\NASA_API_NEO_Wrapper\NASA_API_NEO_Wrapper.csproj" />
-  </ItemGroup>
-
 </Project>
