@@ -19,12 +19,14 @@ namespace NASA_API_ACESSOR
          {
             var NEO_hand = new NEOHandler("DEMO_KEY");
             var NEO =  await NEO_hand.GetNEOData("2022-01-01","2022-01-08");
-            NEO_hand.DisposeOfClient();
+            //NEO_hand.DisposeOfClient();
 
-            NEODataController.SortData(NEO);
             NEODataController.SortData(NEO);
             var Sorted = SortedDataHolder.Instance;
+            var NeoLookUp = await NEO_hand.GetNEOLookupData(Sorted.LargestDiameterObject.NeoRefId);
 
+            Console.WriteLine(NeoLookUp.id + " : "+ NeoLookUp.close_approach_data[0].miss_distance);
+            Console.WriteLine();
             Console.WriteLine(
                  "NeoRefId" + " : " +
                  "EstimatedMaxDiameter" + " : " +

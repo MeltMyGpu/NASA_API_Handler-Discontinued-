@@ -7,25 +7,25 @@ namespace APIRequestHandler.APIFetch
 {
     public class Client
     {
-        private static readonly HttpClient _client = new HttpClient();
-        private bool _disposed;
+        private static readonly HttpClient _Client = new HttpClient();
+        private bool _Disposed;
 
         private bool _Connected;
 
         public Client() // Default
         {
-            _client.DefaultRequestHeaders.Accept.Clear();
+            _Client.DefaultRequestHeaders.Accept.Clear();
         }
 
         public Client(string url) // WORKING
         {
-            ConnectionCheck(url);
-            _client.DefaultRequestHeaders.Accept.Clear();
+            ConnectionCheck();
+            _Client.DefaultRequestHeaders.Accept.Clear();
 
         }
 
 
-        public bool ConnectionCheck(string url) // WORKING
+        public bool ConnectionCheck() // WORKING
         {
 
             _Connected = ConnectionPing();
@@ -36,26 +36,39 @@ namespace APIRequestHandler.APIFetch
         private static bool ConnectionPing() // WORKING
         {
             bool Pingable;
-            Ping pinger = new();
+            Ping Pinger = new();
 
-            var pingCheck = pinger.Send("www.google.com", 3000);
-            Pingable = pingCheck.Status == IPStatus.Success;
-            pinger.Dispose();
+            var PingCheck = Pinger.Send("www.google.com", 3000);
+            Pingable = PingCheck.Status == IPStatus.Success;
+            Pinger.Dispose();
 
             return Pingable;
         }
 
 
-        public async Task<NEORootObject?> SendAPIRequest(string url) // WORKING
+        public async Task<NEORootObject?> SendApiFeedRequest(string url) // WORKING
         {
             APIValidCheck(url);
 
-            var streamTask = _client.GetStreamAsync(url);
-            var NEO = await JsonSerializer.DeserializeAsync<NEORootObject>(await streamTask);
+            var StreamTask = _Client.GetStreamAsync(url);
+            var NEO = await JsonSerializer.DeserializeAsync<NEORootObject>(await StreamTask);
 
             if (NEO != null)
                 return NEO;
-            else throw new InvalidOperationException("The Api call has returned a NUll Reference; ");
+            else throw new InvalidOperationException("The Api call has returned a NUll value; ");
+        }
+
+
+        public async Task<Observation> SendApiLookUpRequest(string url)
+        {
+            APIValidCheck(url);
+
+            var StreamTask = _Client.GetStreamAsync(url);
+            var NeoLookUpData = await JsonSerializer.DeserializeAsync<Observation>(await StreamTask);
+
+            if (NeoLookUpData != null)
+                return NeoLookUpData;
+            else throw new InvalidOperationException("The Api call has returned a NULL value");
         }
 
         private static void APIValidCheck(string url) // WORKING
@@ -74,9 +87,10 @@ namespace APIRequestHandler.APIFetch
 
         public void Dispose()  // WORKING
         {
-            if (!_disposed)
+            if (!_Disposed)
             {
-                _client.Dispose();
+                _Client.Dispose();
+                _Disposed = true;
             }
             else Console.WriteLine("Client has already been disposed of; ");
         }

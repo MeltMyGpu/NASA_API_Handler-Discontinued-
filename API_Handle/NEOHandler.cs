@@ -12,22 +12,33 @@ namespace APIRequestHandler
 {
     public class NEOHandler
     {
-        private readonly Client _client;
+        private readonly Client _Client;
         private NEORootObject? _NEOData;
         private string _APIKey;
-        private string? _url;
-        private readonly Regex _dateFormatCheck;
+        private string? _FeedUrl;
+        private readonly Regex _DateFormatCheck;
         public bool Connected { get; private set; }
         public ILogger Logger { get; set; }
 
 
         public NEOHandler(string key)
         {
-            _client = new Client();
+            _Client = new Client();
             _APIKey = key; 
-            _dateFormatCheck = new Regex("^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$"); // Is here to ensure the dates passed in are in teh correct format //
+            _DateFormatCheck = new Regex("^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$"); // Is here to ensure the dates passed in are in teh correct format //
             Logger = IloggerFactory.LoggerCreation();
-            Logger.LogInformation(String.Format($"Api key set to {key}"));
+            Logger.LogInformation(string.Format($"Api key set to {key}"));
+
+            try
+            {
+                Connected = _Client.ConnectionCheck();
+                Logger.LogInformation("Connection check successful;");
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, "Ping error, either URL is incorrect or internet is diconnected; ");
+                throw;
+            }
 
         }
 
@@ -46,7 +57,7 @@ namespace APIRequestHandler
 
         public void DisposeOfClient()
         {
-            _client.Dispose();
+            _Client.Dispose();
             Logger.LogInformation("HTTP Client disposed; ");
         }
 
@@ -62,25 +73,14 @@ namespace APIRequestHandler
         {
             NullInputCheck(new string[] { dateStart, dateEnd });
 
-            if (_dateFormatCheck.IsMatch(dateStart) && _dateFormatCheck.IsMatch(dateEnd))
+            if (_DateFormatCheck.IsMatch(dateStart) && _DateFormatCheck.IsMatch(dateEnd))
             {
-                _url = string.Format($"https://api.nasa.gov/neo/rest/v1/feed?start_date={dateStart}&end_date={dateEnd}&api_key={_APIKey}");
+                _FeedUrl = string.Format($"https://api.nasa.gov/neo/rest/v1/feed?start_date={dateStart}&end_date={dateEnd}&api_key={_APIKey}");
 
                 try
                 {
-                    Connected = _client.ConnectionCheck(_url);
-                    Logger.LogInformation("Connection check successful;");
-                }
-                catch (Exception ex)
-                {
-                    Logger.LogError(ex, "Ping error, either URL is incorrect or internet is diconnected; ");
-                    throw;
-                }
-
-                try
-                {
-                    _NEOData = await _client.SendAPIRequest(_url);
-                    Logger.LogInformation("API Fetch was successful"); // This log entry never hit?!
+                    _NEOData = await _Client.SendApiFeedRequest(_FeedUrl);
+                    Logger.LogInformation("API Fetch was successful");
                 }
                 catch (Exception ex)
                 {
@@ -96,6 +96,31 @@ namespace APIRequestHandler
 
             
             return _NEOData; 
+        }
+
+        public async Task<Observation> GetNEOLookupData(string neoReferenceId)
+        {
+            NullInputCheck(new string[] { neoReferenceId } );
+            var NeoLookUpData = new Observation();
+
+            if (int.TryParse(neoReferenceId, out int dispose))
+            {
+                string LookUpUrl = $"https://api.nasa.gov/neo/rest/v1/neo/{neoReferenceId}?api_key={_APIKey}";
+
+
+                try
+                {
+                    NeoLookUpData = await _Client.SendApiLookUpRequest(LookUpUrl);
+                    Logger.LogInformation("API Lookup fetch was successful");
+                }
+                catch (Exception ex)
+                {
+                    Logger.LogError(ex, "Error when fetching from API");
+                    throw;
+                }
+            }
+
+            return NeoLookUpData;
         }
 
                         
