@@ -4,6 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>E:\Code\Project libary\C#\The basics\Learning\NASA_API_Handler\API_Handle\obj\Debug\net6.0\APIRequestHandler.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

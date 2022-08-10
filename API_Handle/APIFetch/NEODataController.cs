@@ -5,17 +5,20 @@ using System;
 using System.Collections.Generic;
 using APIRequestHandler.APIFetch.JsonWrapper;
 
-namespace APIRequestHandler
+namespace APIRequestHandler.APIFetch
 {
+    /// <summary>This class can be used to load a Feed request into the SortedDataHolder, for a simpler access format.</summary>
     public static class NEODataController // A static class used to load data into the SortedDataHolder for more easier access and use.
     {
         private static SortedDataHolder SortedData = SortedDataHolder.Instance;
 
 
+        /// <summary>Sorts the handed Feed data.</summary>
+        /// <param name="nEO">A NEORootObject containing a feed request return data. </param>
         public static void SortData(NEORootObject nEO)
         {
 
-            foreach ( var key in nEO.near_earth_objects.Keys)
+            foreach (var key in nEO.near_earth_objects.Keys)
             {
                 if (!SortedData.NeoSimplifiedObjectAccess.ContainsKey(key)) // Here to avoid EX if SortData ran twice on dataset containing same keys;
                 {
@@ -28,6 +31,7 @@ namespace APIRequestHandler
                                 new NEOSimpleWrapper()
                                 {
                                     NeoRefId = nEO.near_earth_objects[key][i].neo_reference_id,
+                                    Key = key,
                                     Index = i,
                                     EstimatedMaxDiameter = nEO.near_earth_objects[key][i].estimated_diameter.meters.estimated_diameter_max,
                                     IsPotentialHazzard = nEO.near_earth_objects[key][i].is_potentially_hazardous_asteroid,
@@ -67,16 +71,12 @@ namespace APIRequestHandler
 
         }
 
-        public static NEOSimpleWrapper GetLargestDiameterObjectData(string[] keyList)
-        {
-            foreach (var date in keyList)
-            {
-                if (date == null) continue;
-
-            } 
-            return new NEOSimpleWrapper();
-        }
-
+        /// <summary>
+        ///   <para>
+        /// Clears the sorted data holder so new data can be loaded in.</para>
+        ///   <para>This must be ran before loading in new data from a diffrent feed request. 
+        /// </para>
+        /// </summary>
         public static void ClearSortedDataHolder()
         {
             SortedData.NeoSimplifiedObjectAccess.Clear();

@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
 namespace APIRequestHandler.APIFetch
-{
+{ 
+    /// <summary>LoggerClass conatiaining one method.</summary>
     public class IloggerFactory
     {
 
-        public static ILogger LoggerCreation()
+    /// <summary>Calling this function creates a logger instance for the NEOhandler,
+    /// this class should not be used outisde of the NEOhandler</summary>
+    /// <returns>An instance of the logger</returns>
+    public static ILogger LoggerCreation()
         {
             var loggerFactory = LoggerFactory.Create(
                 builder => builder

@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using APIRequestHandler;
-using APIRequestHandler.JsonWrapper;
 using System.Collections;
+using APIRequestHandler.APIFetch;
+using APIRequestHandler.APIFetch.JsonWrapper;
 
 namespace NASA_API_ACESSOR
 {
@@ -14,7 +15,6 @@ namespace NASA_API_ACESSOR
     {
         private static readonly HttpClient client = new HttpClient();
         
-
         static async Task Main() // this is all testing functionality and should be ignored.
          {
             var NEO_hand = new NEOHandler("DEMO_KEY");

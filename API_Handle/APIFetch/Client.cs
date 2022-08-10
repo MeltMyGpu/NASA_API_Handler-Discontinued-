@@ -5,6 +5,8 @@ using APIRequestHandler.JsonWrapper;
 
 namespace APIRequestHandler.APIFetch
 {
+    /// <summary>This class handles the requests to the API and the Json unpacking.</summary>
+    /// <remarks>This class is handled by the NEOHandler, and should not be used directly. any changes to this class could result in breaking the whole system.</remarks>
     public class Client
     {
         private static readonly HttpClient _Client = new HttpClient();
@@ -12,19 +14,15 @@ namespace APIRequestHandler.APIFetch
 
         private bool _Connected;
 
+        /// <summary>Initializes a new instance of the <see cref="Client" /> class
+        /// and clears headers.</summary>
         public Client() // Default
         {
             _Client.DefaultRequestHeaders.Accept.Clear();
         }
 
-        public Client(string url) // WORKING
-        {
-            ConnectionCheck();
-            _Client.DefaultRequestHeaders.Accept.Clear();
-
-        }
-
-
+        /// <summary>Checks if the host PC is connected to the internet via a PING call. </summary>
+        /// <returns>returns Boolan based on success of ping check.</returns>
         public bool ConnectionCheck() // WORKING
         {
 
@@ -46,6 +44,10 @@ namespace APIRequestHandler.APIFetch
         }
 
 
+        /// <summary>Sends the API feed request.</summary>
+        /// <param name="url">The URL created by the NEOHandler from the dates and key given.</param>
+        /// <returns>A NEORootObject containing the requested information</returns>
+        /// <exception cref="System.InvalidOperationException">The Api call has returned a NUll value;</exception>
         public async Task<NEORootObject?> SendApiFeedRequest(string url) // WORKING
         {
             APIValidCheck(url);
@@ -59,6 +61,10 @@ namespace APIRequestHandler.APIFetch
         }
 
 
+        /// <summary>Sends the API look up request.</summary>
+        /// <param name="url">The URL that is created by NEOHandler from the NeoID and key.</param>
+        /// <returns>Returns an observation object containing all information related the the requested neo.</returns>
+        /// <exception cref="System.InvalidOperationException">The Api call has returned a NULL value</exception>
         public async Task<Observation> SendApiLookUpRequest(string url)
         {
             APIValidCheck(url);
@@ -79,12 +85,17 @@ namespace APIRequestHandler.APIFetch
             if (httpWebResponceCheck.StatusCode == HttpStatusCode.OK)
             {
                 Console.WriteLine("API's connection status code is: 200 ");
-
             }
             httpWebResponceCheck.Close();
         }
 
 
+        /// <summary>
+        ///   <para>
+        /// Releases unmanaged and - optionally - managed resources.
+        /// </para>
+        ///   <para>Called by the NEOHandler.</para>
+        /// </summary>
         public void Dispose()  // WORKING
         {
             if (!_Disposed)
